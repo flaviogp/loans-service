@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import Customer from "../entities/Customer";
 import CustomerLoans from "../entities/CustomerLoans";
 
 export const get = (req: Request, res: Response) => {
