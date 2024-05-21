@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 import app from "./app"
 
-app.listen('3003', () => {
+app.listen(process.env.PORT, () => {
 
-  console.log(`running at http://localhost:3003`)
+  console.log(`running at http://localhost:${process.env.PORT}`)
 })
