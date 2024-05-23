@@ -38,12 +38,6 @@ export default class CustomerLoans implements ICustomerLoans {
       this.loans.push({
         type: "CONSIGNMENT",
         interest_rate: 2
-      }, {
-        type: "PERSONAL",
-        interest_rate: 4
-      }, {
-        type: "GUARANTEED",
-        interest_rate: 3
       })
     }
 
