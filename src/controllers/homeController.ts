@@ -4,11 +4,10 @@ import CustomerLoans from "../entities/CustomerLoans";
 
 export const post = (req: Request, res: Response) => {
 
-  const customer = req.body
+  const reqCustomer = req.body
+  const customerLoans = new CustomerLoans(reqCustomer)
+  if (customerLoans.getErrors().length >= 1) res.status(400).json(customerLoans.getErrors())
 
-  const customerLoans = new CustomerLoans(customer)
-
-  console.log(customerLoans)
-  res.status(200).json(customerLoans)
+  res.status(200).json(customerLoans.getCustomerLoans())
 
 }

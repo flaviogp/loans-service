@@ -18,6 +18,7 @@ export type customerLoans = {
 }
 
 export interface ICustomerLoans {
-  hasLoan(customer: customer): customerLoans
+  hasLoan(customer: customer): void
 }
 
+export type errors = { type: string, msg: string }
